@@ -1,4 +1,4 @@
-package HomeWork1;
+package HW1;
 
 public class Dog extends Team {
 
