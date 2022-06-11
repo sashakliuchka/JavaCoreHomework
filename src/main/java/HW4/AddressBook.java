@@ -1,7 +1,6 @@
 package HW4;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -12,18 +11,16 @@ import java.util.Set;
 
 
 public class AddressBook {
-    private Map<Integer, String> phonebook;
- {
-        phonebook = new HashMap<>();
+    private Map<String, Integer> phonebook = new HashMap<>();
+
+    public void addElementPhoneBook(String surname, int number ) {
+        phonebook.put(surname, number);
     }
-    public void add(int number, String surname) {
-        phonebook.put(number, surname);
-    }
-    public void get(String surname){
-        if(phonebook.containsValue(surname)) {
-            Set<Map.Entry<Integer, String>> set = phonebook.entrySet();
-            for (Map.Entry<Integer, String> temp : set) {
-                if(temp.getValue().equals(surname)) {
+    public void get(Integer number){
+        if(phonebook.containsValue(number)) {
+            Set<Map.Entry<String, Integer>> set = phonebook.entrySet();
+            for (Map.Entry<String, Integer> temp : set) {
+                if(temp.getValue().equals(number)) {
                     System.out.println(temp.getValue() + " : " + temp.getKey());
                 }
             }
