@@ -6,5 +6,6 @@ package HW2;
  */
 
 
-public class ArraySizeExeption {
+public class MyArraySizeException extends Exception {
+
 }
